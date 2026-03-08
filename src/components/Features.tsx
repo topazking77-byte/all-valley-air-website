@@ -10,7 +10,7 @@ const features = [
   },
   {
     icon: Clock,
-    title: "24/7 Emergency Service",
+    title: "Emergency Service",
     description: "We're here when you need us most. No overtime charges for nights or weekends.",
     color: "bg-orange-500",
   },

@@ -28,7 +28,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
+        <a href="#home" className="flex items-center gap-2 group">
           <img src="/brand-logo.png" alt="All Valley Air Inc." className="h-10 w-auto object-contain" />
         </a>
 
@@ -56,13 +56,14 @@ export default function Navbar() {
             <Phone className="w-4 h-4 text-purple-500" />
             <span>(480) 616-6587</span>
           </a>
-          <motion.button
+          <motion.a
+            href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-purple-500/30 transition-all"
+            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-purple-500/30 transition-all inline-block cursor-pointer"
           >
             Schedule Now
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -97,9 +98,9 @@ export default function Navbar() {
             <Phone className="w-4 h-4 text-purple-500" />
             (480) 616-6587
           </a>
-          <button className="w-full bg-purple-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-purple-500/30">
+          <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full bg-purple-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-purple-500/30 block text-center">
             Schedule Now
-          </button>
+          </a>
         </motion.div>
       )}
     </motion.nav>

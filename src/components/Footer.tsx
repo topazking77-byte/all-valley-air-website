@@ -11,7 +11,7 @@ export default function Footer() {
               <img src="/brand-logo.png" alt="All Valley Air Inc." className="h-12 w-auto object-contain rounded" />
             </a>
             <p className="text-slate-400 leading-relaxed mb-6">
-              Premium HVAC solutions for Arizona homes. We're dedicated to your comfort, 24/7.
+              Premium HVAC solutions for Arizona homes. We're dedicated to your comfort.
             </p>
             <div className="flex gap-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
@@ -26,9 +26,16 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white text-lg mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              {['Services', 'About Us', 'Financing', 'Reviews', 'Careers', 'Privacy Policy'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="hover:text-purple-400 transition-colors">{link}</a>
+              {[
+                { name: 'Services', href: '#services' },
+                { name: 'About Us', href: '#about' },
+                { name: 'Financing', href: '#contact' },
+                { name: 'Reviews', href: '#reviews' },
+                { name: 'Careers', href: '#' },
+                { name: 'Privacy Policy', href: '#' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <a href={link.href} className="hover:text-purple-400 transition-colors">{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -62,9 +69,17 @@ export default function Footer() {
                 <Mail className="w-6 h-6 text-purple-500 shrink-0" />
                 <a href="mailto:info@allvalleyairinc.com" className="hover:text-white transition-colors">info@allvalleyairinc.com</a>
               </li>
-              <li className="flex items-center gap-4">
-                <Clock className="w-6 h-6 text-purple-500 shrink-0" />
-                <span>6 AM - 10 PM Daily</span>
+              <li className="flex items-start gap-4">
+                <Clock className="w-6 h-6 text-purple-500 shrink-0 mt-1" />
+                <div className="flex flex-col gap-1">
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Monday</span><span>6:00 AM - 10:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Tuesday</span><span>6:00 AM - 10:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Wednesday</span><span>6:00 AM - 10:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Thursday</span><span>6:00 AM - 10:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Friday</span><span>6:00 AM - 10:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Saturday</span><span>6:00 AM - 10:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Sunday</span><span>6:00 AM - 10:00 PM</span></div>
+                </div>
               </li>
             </ul>
           </div>

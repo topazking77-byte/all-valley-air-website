@@ -18,7 +18,7 @@ export default function App() {
         <Services />
 
         {/* CTA Section */}
-        <section className="py-24 bg-purple-600 relative overflow-hidden">
+        <section id="contact" className="py-24 bg-purple-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
           <div className="container mx-auto px-6 relative z-10 text-center">
             <motion.h2
@@ -34,13 +34,14 @@ export default function App() {
               Don't let the heat win.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <motion.button
+              <motion.a
+                href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-purple-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
+                className="bg-white text-purple-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all inline-block cursor-pointer"
               >
                 Schedule Now
-              </motion.button>
+              </motion.a>
               <motion.a
                 href="tel:+14806166587"
                 whileHover={{ scale: 1.05 }}

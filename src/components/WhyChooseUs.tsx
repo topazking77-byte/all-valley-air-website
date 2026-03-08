@@ -4,7 +4,6 @@ import { CheckCircle2 } from 'lucide-react';
 const reasons = [
     "Family Owned and Operated",
     "Small appointment windows",
-    "24/7 Emergency Response",
     "Honest, fair, upfront pricing",
     "Clear price quotes",
     "Our satisfaction guarantee"
